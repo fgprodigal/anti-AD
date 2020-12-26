@@ -46,12 +46,12 @@ jobs:
           #git rm -rf .
           cp -f dist/* .
           rm -rf dist
-          git add adblock-for-dnsmasq.conf
-          git commit -am "Updated at $(date)"
           #git branch -D release
           #git branch -m release
 
           if [[ `git status --porcelain` ]]; then
+            git add adblock-for-dnsmasq.conf
+            git commit -am "Updated at $(date)"
             echo "::set-output name=changes::true"
           fi
 
@@ -64,6 +64,7 @@ jobs:
           force: true
 
       - name: Purge jsDelivr
+        if: steps.commit.outputs.changes
         run: |
           curl https://purge.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf
 
