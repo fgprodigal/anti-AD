@@ -35,7 +35,8 @@ jobs:
             sed -i "/${line}/d" dist/adblock-for-dnsmasq.conf
           done
 
-      - name: Push artifacts to release branch
+      - name: Commit artifacts to release branch
+        id: commt
         run: |
           git config --local user.email "769910+fgprodigal@users.noreply.github.com"
           git config --local user.name "github-action[bot]"
@@ -44,13 +45,19 @@ jobs:
           #git checkout --orphan release-orphan
           #git rm -rf .
           cp -f dist/* .
+          rm -rf dist
           git add adblock-for-dnsmasq.conf
           git commit -am "Updated at $(date)"
           #git branch -D release
           #git branch -m release
 
+          if [[ `git status --porcelain` ]]; then
+            echo "::set-output name=changes::true"
+          fi
+
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
+        if: steps.commit.outputs.changes
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: release
