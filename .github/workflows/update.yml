@@ -56,7 +56,7 @@ jobs:
           branch: release
           force: true
 
-      - name: Purge jsdelivr
+      - name: Purge jsDelivr
         run: |
-          curl https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf
+          curl https://purge.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf
 
