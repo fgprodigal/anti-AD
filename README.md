@@ -1,4 +1,4 @@
-本项目 Fork 自 [anti-AD](https://github.com/privacy-protection-tools/anti-AD) 项目（点击访问获取详细介绍）,每 30 分钟更新一次。
+本项目 Fork 自 [anti-AD](https://github.com/privacy-protection-tools/anti-AD) 项目（点击访问获取详细介绍）,每小时更新一次。
 
 ### 📥 下载链接
 
