@@ -46,15 +46,16 @@ jobs:
           git rm -rf .
           cp -f dist/* .
           rm -rf dist
-          git branch -D release
-          git branch -m release
+         
 
-          if [[ `git status --porcelain` ]]; then
+          #if [[ `git status --porcelain` ]]; then
             git add adblock-for-dnsmasq.conf
             git commit -am "Updated at $(date)"
             echo "::set-output name=changes::true"
-          fi
+          #fi
 
+          git branch -D release
+          git branch -m release
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         if: steps.commit.outputs.changes
