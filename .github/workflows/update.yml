@@ -28,7 +28,7 @@ jobs:
 
       - name: Remove from whitelist
         run: |
-          cat anti-AD/whitelist.lst | while read line
+          cat whitelist.lst | while read line
           do
             sed -i "/${line}/d" dist/adblock-for-dnsmasq.conf
           done
