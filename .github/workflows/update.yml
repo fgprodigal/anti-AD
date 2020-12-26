@@ -36,25 +36,25 @@ jobs:
           done
 
       - name: Commit artifacts to release branch
-        id: commt
+        id: commit
         run: |
           git config --local user.email "769910+fgprodigal@users.noreply.github.com"
           git config --local user.name "github-action[bot]"
           git fetch
           git checkout release
-          #git checkout --orphan release-orphan
-          #git rm -rf .
+          git checkout --orphan release-orphan
+          git rm -rf .
           cp -f dist/* .
           rm -rf dist
          
-          if [[ `git status --porcelain` ]]; then
+          #if [[ `git status --porcelain` ]]; then
             git add adblock-for-dnsmasq.conf
             git commit -am "Updated at $(date)"
             echo "::set-output name=changes::true"
-          fi
+          #fi
 
-          #git branch -D release
-          #git branch -m release
+          git branch -D release
+          git branch -m release
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         if: steps.commit.outputs.changes
