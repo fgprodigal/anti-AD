@@ -47,7 +47,7 @@ jobs:
           git add adblock-for-dnsmasq.conf
           git commit -am "Updated at $(date)"
           #git branch -D release
-          git branch -m release
+          #git branch -m release
 
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
