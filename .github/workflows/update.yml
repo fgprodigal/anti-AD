@@ -10,6 +10,9 @@ on:
 #  watch:
 #    types: [started]
 
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   build:
     runs-on: ubuntu-18.04
