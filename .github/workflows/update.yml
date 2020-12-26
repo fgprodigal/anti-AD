@@ -1,0 +1,63 @@
+#=================================================
+# https://github.com/P3TERX/Actions-OpenWrt
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
+
+name: Build OpenWrt x86_64
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "30 * * * *"
+  watch:
+    types: started
+#  watch:
+#    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create dist folder
+        run: mkdir -p dist
+
+      - name: Get rule
+        run: |
+          curl -o dist/adblock-for-dnsmasq.conf https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/adblock-for-dnsmasq.conf
+
+      - name: Remove from whitelist
+        run: |
+          cat anti-AD/whitelist.lst | while read line
+          do
+            sed -i "/${line}/d" dist/adblock-for-dnsmasq.conf
+          done
+
+      - name: Push artifacts to release branch
+        run: |
+          git config --local user.email "769910+fgprodigal@users.noreply.github.com"
+          git config --local user.name "github-action[bot]"
+          git fetch
+          git checkout release
+          git checkout --orphan release-orphan
+          git rm -rf .
+          cp -f dist/* .
+          git add adblock-for-dnsmasq.conf
+          git commit -am "Updated at $(date)"
+          git branch -D release
+          git branch -m release
+
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: release
+          force: true
