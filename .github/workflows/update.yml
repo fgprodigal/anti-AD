@@ -41,13 +41,13 @@ jobs:
           git config --local user.email "769910+fgprodigal@users.noreply.github.com"
           git config --local user.name "github-action[bot]"
           git fetch
-          git checkout release
+          #git checkout release
           #git checkout --orphan release-orphan
           #git rm -rf .
           cp -f dist/* .
           rm -rf dist
-          #git branch -D release
-          #git branch -m release
+          git branch -D release
+          git branch -m release
 
           if [[ `git status --porcelain` ]]; then
             git add adblock-for-dnsmasq.conf
