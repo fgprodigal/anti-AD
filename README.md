@@ -2,6 +2,6 @@
 
 ### 📥 下载链接
 
-|       📦 项目       |        📃 文件名         |                                       :octocat: GitHub RAW                                        |                                         🚀 CDN 加速                                         |
-| :-----------------: | :----------------------: | :-----------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
-| adblock-for-dnsmasq | adblock-for-dnsmasq.conf | [点我下载](https://raw.githubusercontent.com/fgprodigal/anti-AD/release/adblock-for-dnsmasq.conf) | [点我起飞](https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf) |
+|         📃 文件名         |                                       :octocat: GitHub RAW                                        |                                         🚀 CDN 加速                                         |
+| :----------------------: | :-----------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------: |
+| adblock-for-dnsmasq.conf | [点我下载](https://raw.githubusercontent.com/fgprodigal/anti-AD/release/adblock-for-dnsmasq.conf) | [点我起飞](https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf) |
