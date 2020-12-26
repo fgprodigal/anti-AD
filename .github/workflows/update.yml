@@ -30,6 +30,7 @@ jobs:
         run: |
           cat whitelist.lst | while read line
           do
+            echo "${line}"
             sed -i "/${line}/d" dist/adblock-for-dnsmasq.conf
           done
 
