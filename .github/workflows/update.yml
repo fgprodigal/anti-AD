@@ -55,3 +55,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: release
           force: true
+
+      - name: Purge jsdelivr
+        run: |
+          curl https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf
+
