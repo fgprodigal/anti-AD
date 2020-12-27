@@ -46,9 +46,8 @@ jobs:
           #git rm -rf .
           cp -f dist/* .
           rm -rf dist
-         
-          if [[ `git status --porcelain` ]]; then
-            git add adblock-for-dnsmasq.conf
+          git add adblock-for-dnsmasq.conf
+          if ! git diff-index --quiet --cached HEAD; then
             git commit -am "Updated at $(date)"
             echo "::set-output name=changes::true"
           fi
