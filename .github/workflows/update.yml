@@ -38,7 +38,7 @@ jobs:
             sed -i "/${line}/d" adblock-for-dnsmasq.conf
           done
 
-      - name: Commit artifacts to release branch
+      - name: Git commit
         id: commit
         run: |
           cd anti-AD
