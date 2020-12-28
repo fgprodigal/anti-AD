@@ -47,7 +47,7 @@ jobs:
           git config --local user.name "github-action[bot]"
           git add adblock-for-dnsmasq.conf
           if ! git diff-index --quiet --cached HEAD; then
-            git commit -am "Updated at $(date)"
+            git commit -am "Auto updated at $(date)"
             echo "::set-output name=changes::true"
           fi
 
