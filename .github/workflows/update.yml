@@ -5,7 +5,7 @@ on:
     branches: [master]
     paths:
       - 'update.yml'
-      - 'config/*'
+      - 'config/**'
   schedule:
     - cron: 0 * * * *
   watch:
