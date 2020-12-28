@@ -3,6 +3,9 @@ name: Update anti-AD rules
 on:
   push:
     branches: [master]
+    paths:
+      - '.github/*'
+      - 'config/*'
   schedule:
     - cron: 0 * * * *
   watch:
@@ -19,51 +22,42 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Create dist folder
-        run: mkdir -p dist
+        run: git clone https://github.com/fgprodigal/anti-AD.git anti-AD
 
       - name: Get rule
         run: |
-          curl -o dist/adblock-for-dnsmasq.conf https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/adblock-for-dnsmasq.conf
+          curl -o adblock-for-dnsmasq.conf https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/adblock-for-dnsmasq.conf
 
       - name: Remove from whitelist
         run: |
           cat whitelist.lst | while read line
           do
             echo "${line}"
-            sed -i "/${line}/d" dist/adblock-for-dnsmasq.conf
+            sed -i "/${line}/d" adblock-for-dnsmasq.conf
           done
 
       - name: Commit artifacts to release branch
         id: commit
         run: |
+          cd anti-AD
+          cp ../adblock-for-dnsmasq.conf adblock-for-dnsmasq.conf
           git config --local user.email "769910+fgprodigal@users.noreply.github.com"
           git config --local user.name "github-action[bot]"
-          git fetch
-          git checkout release
-          #git checkout --orphan release-orphan
-          #git rm -rf .
-          cp -f dist/* .
-          rm -rf dist
           git add adblock-for-dnsmasq.conf
           if ! git diff-index --quiet --cached HEAD; then
             git commit -am "Updated at $(date)"
             echo "::set-output name=changes::true"
           fi
 
-          #git branch -D release
-          #git branch -m release
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
         if: steps.commit.outputs.changes
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: release
-          force: true
+          branch: master
+          directory: 'anti-AD'
 
       - name: Purge jsDelivr
         if: steps.commit.outputs.changes
         run: |
-          curl https://purge.jsdelivr.net/gh/fgprodigal/anti-AD@release/adblock-for-dnsmasq.conf
-
+          curl https://purge.jsdelivr.net/gh/fgprodigal/anti-AD@master/adblock-for-dnsmasq.conf
