@@ -2,7 +2,7 @@
 
 ### 📥 下载链接
 
-|        📃 文件名         |                                       :octocat: GitHub RAW                                       |                                        🚀 CDN 加速                                         |        适用于        |
+|        📃 文件名         |                                       :octocat: GitHub RAW                                       |                                        🚀 CDN 加速                                         |       🛠 适用于       |
 | :----------------------: | :----------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :------------------: |
 | adblock-for-dnsmasq.conf | [点我下载](https://raw.githubusercontent.com/fgprodigal/anti-AD/master/adblock-for-dnsmasq.conf) | [点我起飞](https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@master/adblock-for-dnsmasq.conf) | dnsmasq 及其衍生版本 |
 |   anti-ad-domains.txt    |   [点我下载](https://raw.githubusercontent.com/fgprodigal/anti-AD/master/anti-ad-domains.txt)    |   [点我起飞](https://cdn.jsdelivr.net/gh/fgprodigal/anti-AD@master/anti-ad-domains.txt)    |    Pi-Hole 或其他    |
