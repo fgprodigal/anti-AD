@@ -4877,11 +4877,8 @@ static.akacdn.ru
 burstnet.akadns.net
 apac1.notify.windows.com.akadns.net
 asimov-win.settings.data.microsoft.com.akadns.net
-cy2.vortex.data.microsoft.com.akadns.net
 db5.settings.data.microsoft.com.akadns.net
-db5.vortex.data.microsoft.com.akadns.net
 geo.settings.data.microsoft.com.akadns.net
-geo.vortex.data.microsoft.com.akadns.net
 hk2.settings.data.microsoft.com.akadns.net
 lb1.www.ms.akadns.net
 modern.watson.data.microsoft.com.akadns.net
@@ -4889,7 +4886,6 @@ onecollector.cloudapp.aria.akadns.net
 schemas.microsoft.akadns.net
 spyneteurope.microsoft.akadns.net
 v10-win.vortex.data.microsft.com.akadns.net
-v10-win.vortex.data.microsoft.com.akadns.net
 whoami.akamai.net
 aksb-a.akamaihd.net
 appnext-a.akamaihd.net
@@ -24591,10 +24587,8 @@ v20.vortex-win.data.microsoft.com
 vortex-sandbox.data.microsoft.com
 vortex-win-sandbox.data.microsoft.com
 vortex.data.glbdns2.microsoft.com
-vortex.data.microsoft.com
 watson.ppe.telemetry.microsoft.com
 watson.telemetry.microsoft.com
-web.vortex.data.microsoft.com
 wes.df.telemetry.microsoft.com
 win10.ipv6.microsoft.com
 win1710.ipv6.microsoft.com
