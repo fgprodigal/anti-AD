@@ -33034,7 +33034,6 @@
 ||windoorsew.club^
 ||windowmentaria.com^
 ||windows-remora-system.com^
-||activity.windows.com^
 ||bn2wns1.wns.windows.com^
 ||bn3sch020010558.wns.windows.com^
 ||bn3sch020010560.wns.windows.com^

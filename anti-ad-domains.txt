@@ -39675,7 +39675,6 @@ winde.cc
 windoorsew.club
 windowmentaria.com
 windows-remora-system.com
-activity.windows.com
 bn2wns1.wns.windows.com
 bn3sch020010558.wns.windows.com
 bn3sch020010560.wns.windows.com
@@ -39792,7 +39791,6 @@ hk2wns1.wns.windows.com
 hk2wns1b.wns.windows.com
 par02p.wns.windows.com
 sg2p.wns.windows.com
-test.activity.windows.com
 encoderfarmstatsnew.servicebus.windows.net
 insitez.blob.core.windows.net
 optanon.blob.core.windows.net

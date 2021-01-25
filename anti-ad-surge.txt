@@ -34773,7 +34773,6 @@ DOMAIN-SUFFIX,winde.cc
 DOMAIN-SUFFIX,windoorsew.club
 DOMAIN-SUFFIX,windowmentaria.com
 DOMAIN-SUFFIX,windows-remora-system.com
-DOMAIN-SUFFIX,activity.windows.com
 DOMAIN-SUFFIX,bn2wns1.wns.windows.com
 DOMAIN-SUFFIX,bn3sch020010558.wns.windows.com
 DOMAIN-SUFFIX,bn3sch020010560.wns.windows.com
