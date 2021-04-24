@@ -1,5 +1,5 @@
 !Title: anti-AD
-!Version: 20210424180311
+!Version: 20210424181942
 !Homepage: https://github.com/privacy-protection-tools/anti-AD
 !Total lines: 41547
 ||*.wap.xsbiquge.com^
@@ -38603,9 +38603,6 @@
 ||eaus2watcab02.blob.core.windows.net^
 ||weus2watcab01.blob.core.windows.net^
 ||weus2watcab02.blob.core.windows.net^
-||pkkjxs.cn^
-||dbc.pkkjxs.cn^
-||www.pkkjxs.cn^
 ||telemetry.remoteapp.windowsazure.com^
 ||windowsxi.com^
 ||windzq.com^
@@ -41010,6 +41007,7 @@
 ||appcloud2.in.zhihu.com^
 ||appcloud2.zhihu.com^
 ||event.zhihu.com^
+||udd1i5.zhihu.com^
 ||zhilingshidai.com^
 ||zhimaad.cn^
 ||zhimengad.com^
