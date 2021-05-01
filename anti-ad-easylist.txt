@@ -1,7 +1,7 @@
 !Title: anti-AD
-!Version: 20210501104605
+!Version: 20210501114547
 !Homepage: https://github.com/privacy-protection-tools/anti-AD
-!Total lines: 38147
+!Total lines: 38148
 ||*.wap.xsbiquge.com^
 ||*serror*.wo.com.cn^
 ||201*.myhard.com^
@@ -75,7 +75,7 @@
 ||vix.*.criteo.net^
 ||vtnlog-*.elb.amazonaws.com^
 ||ya*.dwstatic.com^
-||ad*.udn.com^$dnstype=~A
+||ad*.udn.com^$dnstype=A|CNAME
 ||*.mgr.consensu.org^
 ||vs*.gzcu.u3.ucweb.com^
 ||ad*.goforandroid.com^
@@ -3290,7 +3290,7 @@
 ||adversaldisplay.com^
 ||adversalservers.com^
 ||adverserve.net^
-/^(\S+\.)?advert/$dnstype=~A
+/^(\S+\.)?advert/$dnstype=~CNAME
 ||advfeeds.com^
 ||advg.jp^
 /^(\S+\.)?widgets?\./
@@ -38140,3 +38140,4 @@
 @@||ad.azure.com^
 @@||ad.cityu.edu.hk^
 @@||tracking-protection.cdn.mozilla.net^
+@@||skydrivesync.policies.live.net^
