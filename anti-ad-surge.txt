@@ -1,7 +1,7 @@
 #TITLE=anti-AD
-#VER=20210820024010
+#VER=20210821091214
 #URL=https://github.com/privacy-protection-tools/anti-AD
-#TOTAL_LINES=46655
+#TOTAL_LINES=46652
 DOMAIN-SUFFIX,00-gov.cn
 DOMAIN-SUFFIX,kwcdn.000dn.com
 DOMAIN-SUFFIX,kwcscdn.000dn.com
@@ -22841,7 +22841,6 @@ DOMAIN-SUFFIX,iatoex.kahve.com
 DOMAIN-SUFFIX,kaifiluk.com
 DOMAIN-SUFFIX,kaihutai.cn
 DOMAIN-SUFFIX,kaiphapt.net
-DOMAIN-SUFFIX,kaipuyun.cn
 DOMAIN-SUFFIX,kaishist.top
 DOMAIN-SUFFIX,kaitongyewu.com
 DOMAIN-SUFFIX,kaitoupiao.com
@@ -29744,8 +29743,6 @@ DOMAIN-SUFFIX,orarbeatrem.club
 DOMAIN-SUFFIX,oratosaeron.com
 DOMAIN-SUFFIX,offline-adv.oray.com
 DOMAIN-SUFFIX,tk.oray.com
-DOMAIN-SUFFIX,pgy.oray.com
-DOMAIN-SUFFIX,pgy-api.oray.com
 DOMAIN-SUFFIX,sl-tk.oray.com
 DOMAIN-SUFFIX,sl-log.oray.net
 DOMAIN-SUFFIX,pubsub02.oray.net
